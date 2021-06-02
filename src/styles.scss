@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@import "./uikit.css";
+
+.uk-section-primary {
+  background: #627c95 !important;
+}
+
+.mat-toolbar.mat-primary {
+  background-color: #627c95 !important;
+}
+
+.mat-drawer-container {
+  background-color: white !important;
+}
+
+.mat-drawer {
+  border-right: none !important;
+}
+
+.center {
+  height: 100vh !important;
+}
+
+.uk-text-lead {
+  font-size: 80px !important;
+  color: white !important;
+  font-weight: bold !important;
+  line-height: 80px !important;
+  text-shadow: 0 4px 10px #0000004f;
+}
+
+.uk-input {
+  border-radius: 500px;
+  padding: 2px 20px;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background-color: #536c84;
+
+  p {
+    margin: 0;
+  }
+
+  .uk-flex-between {
+    align-items: center;
+  }
+
+  span {
+    font-size: 28px;
+  }
+}
+
+.tm-button-default {
+  border-radius: 500px;
+}
+
+.text-header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

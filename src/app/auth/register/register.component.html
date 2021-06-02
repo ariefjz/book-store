@@ -1,0 +1,41 @@
+<div class="uk-section-primary tm-section-texture">
+    <div uk-height-viewport="offset-top: true; offset-bottom: true" class="uk-flex uk-section uk-section-small uk-flex-middle uk-text-center center">
+        <div class="uk-width-1-1">
+            <div class="uk-container" [ngStyle]="{'opacity': loading ? .3 : 1.0}" >
+                <h1 class="uk-margin-medium uk-text-lead">
+                    Book Store
+                </h1>
+                <p class="uk-margin-medium text-header">
+                    Register
+                </p>
+                <p>
+                    Masukkan data anda dengan benar
+                </p>
+                <form>
+
+                    <div class="uk-margin">
+                        <div class="uk-inline uk-width-1-2">
+                            <input class="uk-input" type="email" placeholder="muhammad@webmail.uad.ac.id" [(ngModel)] = "user.email" name="email" required>
+                        </div>
+                    </div>
+                
+                    <div class="uk-margin">
+                        <div class="uk-inline uk-width-1-2">
+                            <input class="uk-input" type="password" placeholder="password" [(ngModel)] = "user.password" name="password" required>
+                        </div>
+                    </div>
+                
+                    <div class="uk-inline uk-width-1-2 uk-margin-medium uk-flex-middle">
+                        <div class="uk-flex uk-flex-between" style="align-items: center;">
+                            <h3 style="margin: 0;"><a class="uk-link-heading" routerLink = "/login" >Sudah punya akun ?</a></h3>
+        
+                            <a class="uk-button uk-button-default tm-button-default uk-icon" (click)="register()">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

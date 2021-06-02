@@ -1,0 +1,46 @@
+<div class="uk-section-primary tm-section-texture">
+    <div uk-height-viewport="offset-top: true; offset-bottom: true" class="uk-flex uk-section uk-section-small uk-flex-middle uk-text-center center">
+        <div class="uk-width-1-1">
+            <div class="uk-container">
+                <h1 class="uk-margin-medium uk-text-lead">
+                    Arief Muhammad
+                </h1>
+                <p class="uk-margin-medium">
+                    1900016082
+                </p>
+                <p>
+                    Book Store
+                </p>
+                <div class="uk-inline uk-width-1-1 uk-flex-middle" style="padding-top: 20px;">
+                    <div class="uk-flex uk-flex-center" style="align-items: center;">
+                        <a class="uk-link-heading" routerLink = "/register" style="margin-right: 20px;">Register</a>
+                        <a routerLink="/login" class="uk-button uk-button-default tm-button-default uk-icon">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div fxLayout="row wrap" fxLayoutGap="grid">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let book of books">
+                <div class="content">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title>{{book.title}}</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                          <p>
+                            {{book.author}}
+                          </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                          <button mat-button>LIKE</button>
+                          <button mat-button>SHARE</button>
+                        </mat-card-actions>
+                      </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

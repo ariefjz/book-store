@@ -1,0 +1,53 @@
+<ng-container>
+    
+    <!--toolbar-->
+    <mat-toolbar color="primary" class="example-header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Book Store</span>
+        <div class="uk-width-expand"></div>
+        <button mat-button (click)="logOut()">Logout</button>
+    </mat-toolbar>
+    <!--end toolbar-->
+    
+    <mat-sidenav-container class="admin-container">
+        <mat-sidenav 
+            #sidenav
+            mode="side" 
+            [position]="'start'" 
+            [opened]="true" 
+            class="sidenav-left"
+            [fixedInViewport]="true" 
+            [fixedTopGap]="70"
+            [fixedBottomGap]="0">
+        
+        <mat-nav-list>
+            <mat-list-item routerLink="dashboard">
+                <mat-icon matListIcon>dashboard</mat-icon>
+                <h3 matLine>Dashboard</h3>
+            </mat-list-item>
+            <mat-list-item routerLink="products">
+                <mat-icon matListIcon>camera_enhance</mat-icon>
+                <h3 matLine>Product</h3>
+            </mat-list-item>     
+        </mat-nav-list>
+
+      </mat-sidenav>
+    
+        <mat-sidenav 
+            #sidenav mode="side"
+            [position]="'end'" 
+            class="example-sidenav"
+            [fixedInViewport]="true" 
+            [fixedTopGap]="65"
+            [fixedBottomGap]="0">
+        </mat-sidenav>
+
+        <!--sidenav content-->
+            <mat-sidenav-content style="padding: 20px; background-color: #ccc;">
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        <!--end sidenav content-->
+    </mat-sidenav-container>   
+</ng-container>
